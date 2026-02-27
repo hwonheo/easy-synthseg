@@ -1,0 +1,50 @@
+# 환경 변수 (민감 정보)
+.env
+!.env.example
+
+# 데이터 디렉토리 (환자 데이터, 대용량 파일)
+data/
+
+# Python 가상환경
+venv/
+.venv/
+env/
+
+# conda 환경 (실험 브랜치)
+envs/
+
+# macOS 시스템 파일
+.DS_Store
+**/.DS_Store
+
+# bkit 플러그인 상태 (세션별 임시)
+.bkit/
+docs/.bkit-memory.json
+docs/.pdca-status.json
+docs/.pdca-snapshots/
+
+# Claude Code 세션 데이터
+.claude/
+
+# 백업 디렉토리
+.backup/
+
+# SynthSeg 모델 가중치 (대용량, 외부 의존성)
+synthseg_src/SynthSeg/
+
+# 의료영상 파일 (대용량)
+*.nii
+*.nii.gz
+*.mgz
+*.dcm
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 로그
+*.log

@@ -1,0 +1,39 @@
+services:
+  freesurfer:
+    image: freesurfer/freesurfer:7.4.1
+    container_name: freesurfer_synthsr
+    volumes:
+      - ${NIFTI_DIR}:/input:ro
+      - ${SYNTHSR_DIR}:/output
+      - ${FS_LICENSE_DIR}:/fs_license:ro
+    environment:
+      - FS_LICENSE=/fs_license/${FS_LICENSE_FILE}
+    entrypoint: []
+
+  synthseg:
+    image: pwesp/synthseg:py38
+    container_name: synthseg
+    volumes:
+      - ${SYNTHSR_DIR}:/synthsr:ro
+      - ${SYNTHSEG_DIR}:/output
+
+  fastsurfer:
+    image: deepmi/fastsurfer:latest
+    container_name: fastsurfer
+    volumes:
+      - ${NIFTI_DIR}:/data:ro
+      - ${FASTSURFER_DIR}:/output
+      - ${FS_LICENSE_DIR}:/fs_license:ro
+    command:
+      - --allow_root
+      - --fs_license
+      - /fs_license/${FS_LICENSE_FILE}
+      - --t1
+      - /data/${T1_REL}
+      - --sid
+      - ${SID}
+      - --sd
+      - /output
+      - --3T
+      - --threads
+      - "${THREADS:-4}"

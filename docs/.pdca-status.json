@@ -1,0 +1,254 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-02-27T07:43:03.271Z",
+  "activeFeatures": [
+    "scripts",
+    "synthseg_src",
+    "lab2im",
+    "keras"
+  ],
+  "primaryFeature": "scripts",
+  "features": {
+    "pipeline-refactor": {
+      "phase": "archived",
+      "matchRate": 97,
+      "startedAt": "2026-02-26T03:09:25.220Z",
+      "archivedAt": "2026-02-26T03:50:00.000Z",
+      "archivedTo": "docs/archive/2026-02/pipeline-refactor/"
+    },
+    "tf-metal-synthseg": {
+      "phase": "archived",
+      "matchRate": 93,
+      "iterationCount": 0,
+      "startedAt": "2026-02-27T00:00:00.000Z",
+      "archivedAt": "2026-02-27T06:00:00.000Z",
+      "archivedTo": "docs/archive/2026-02/tf-metal-synthseg/"
+    },
+    "scripts": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-26T03:18:44.885Z",
+        "lastUpdated": "2026-02-27T07:43:03.271Z"
+      },
+      "lastFile": "/Users/hwon/Documents/Git/fastsurfer-docker/scripts/tui.py"
+    },
+    "synthseg_src": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-27T04:47:59.691Z",
+        "lastUpdated": "2026-02-27T05:02:54.691Z"
+      },
+      "lastFile": "/Users/hwon/Documents/Git/fastsurfer-docker/synthseg_src/run_native_test.py"
+    },
+    "lab2im": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-27T04:49:07.146Z",
+        "lastUpdated": "2026-02-27T04:49:07.146Z"
+      },
+      "lastFile": "/Users/hwon/Documents/Git/fastsurfer-docker/synthseg_src/SynthSeg/ext/lab2im/utils.py"
+    },
+    "keras": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-27T05:03:46.367Z",
+        "lastUpdated": "2026-02-27T05:03:46.367Z"
+      },
+      "lastFile": "/opt/homebrew/Caskroom/miniforge/base/envs/synthseg-metal/lib/python3.10/site-packages/keras/src/layers/normalization/batch_normalization.py"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-02-26T03:09:25.220Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-02-27T07:43:03.271Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-02-26T03:18:44.885Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:19:08.737Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:21:28.056Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:21:32.546Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:21:58.131Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:22:06.806Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:22:30.146Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T03:47:51.534Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T09:02:52.455Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T09:05:06.762Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-26T09:25:05.701Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:08:57.622Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:09:01.478Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:09:06.031Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:46:58.642Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:47:11.122Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:47:59.691Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:48:33.672Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:49:07.146Z",
+      "feature": "lab2im",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:50:00.968Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:58:22.638Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T04:58:44.359Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T05:02:54.691Z",
+      "feature": "synthseg_src",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T05:03:46.367Z",
+      "feature": "keras",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T07:09:58.988Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T07:10:05.076Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-27T07:43:03.271Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

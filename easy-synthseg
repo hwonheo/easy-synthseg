@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# easy-synthseg — TUI entry point for the brain MRI segmentation pipeline
+# Usage: ./easy-synthseg
+
+set -euo pipefail
+
+# Locate project root (directory of this script)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Load .env if it exists
+if [[ -f "${SCRIPT_DIR}/.env" ]]; then
+  set -a
+  # shellcheck source=.env
+  source "${SCRIPT_DIR}/.env"
+  set +a
+else
+  echo "[WARN] .env not found — some features may not work until you configure it."
+fi
+
+# Check python3
+if ! command -v python3 &>/dev/null; then
+  echo "[ERR] python3 not found. Please install Python 3.8+ and re-run." >&2
+  exit 1
+fi
+
+# Check rich; offer to install if missing
+if ! python3 -c "import rich" &>/dev/null; then
+  echo "[WARN] Python package 'rich' is not installed."
+  echo "       Install it now? (y/N): "
+  read -r answer
+  case "$answer" in
+    [Yy]*)
+      python3 -m pip install rich
+      ;;
+    *)
+      echo "[ERR] 'rich' is required. Run: pip install rich" >&2
+      exit 1
+      ;;
+  esac
+fi
+
+exec python3 "${SCRIPT_DIR}/scripts/tui.py" "$@"

@@ -1,0 +1,11 @@
+services:
+  freesurfer:
+    platform: linux/amd64
+    user: "0:0"
+
+  synthseg:
+    platform: linux/amd64
+
+  fastsurfer:
+    platform: linux/amd64
+    user: "0:0"
