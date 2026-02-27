@@ -9,6 +9,18 @@ Runs **SynthSR → SynthSeg** as the default path, with **FastSurfer** as an opt
 
 ---
 
+## Why This Exists
+
+SynthSR 하나 돌려보려고 했을 뿐이었다.
+
+FreeSurfer 공식 문서를 열었더니 설치 가이드가 나왔다. 그냥 따라 하면 되겠거니 했는데, macOS ARM64에서 바이너리가 동작하지 않았다. Docker로 우회하면 되겠다고 생각했다. x86 에뮬레이션 위에서 돌아가는 SynthSR은 느렸다. 어차피 Docker 쓰는 김에 SynthSeg도 컨테이너로 묶었다. 그런데 Apple Silicon에서 GPU를 못 쓴다는 게 걸렸다. tensorflow-metal을 써서 네이티브로 돌려보기로 했다. conda 환경을 새로 구성했다. BatchNorm 레이어가 Metal을 지원하지 않아 CPU로 폴백됐다. 그래도 Docker 에뮬레이션보다 1.36배 빨랐다. SynthSeg가 됐으니 FastSurfer도 연결해보자는 생각이 들었다.
+
+스크립트가 다섯 개가 됐다. 스크립트가 다섯 개면 실행 순서를 까먹는다. 그래서 파이프라인 스크립트를 만들었다. 그리고 TUI를 만들었다.
+
+**SynthSR 하나 때문에 이렇게 됐다.**
+
+---
+
 ## Pipeline Overview
 
 ```
@@ -267,3 +279,21 @@ fastsurfer-docker/
 │   └── SynthSeg/                 # SynthSeg 소스 + 가중치
 └── data/                         # input/output data (not committed)
 ```
+
+---
+
+## License
+
+이 프로젝트의 래퍼 코드(스크립트, TUI)는 **FreeSurfer Software License (v1.0)** 를 따릅니다 — 비상업적 연구 목적으로만 사용 가능합니다. 전문은 [LICENSE](LICENSE)를 참고하세요.
+
+파이프라인이 호출하는 각 도구는 별도 라이선스를 따릅니다:
+
+| Tool | License |
+|------|---------|
+| [FreeSurfer](https://surfer.nmr.mgh.harvard.edu) | [FreeSurfer Software License](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSoftwareLicense) |
+| [SynthSR](https://github.com/BBillot/SynthSR) | Apache-2.0 |
+| [SynthSeg](https://github.com/BBillot/SynthSeg) | Apache-2.0 |
+| [FastSurfer](https://github.com/Deep-MI/FastSurfer) | Apache-2.0 |
+
+> **Note**: SynthSR 및 FastSurfer 실행에는 유효한 FreeSurfer 라이선스 파일(`license.txt`)이 필요합니다.
+> 무료 등록: https://surfer.nmr.mgh.harvard.edu/registration.html
