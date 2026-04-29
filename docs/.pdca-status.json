@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-02-27T07:43:03.271Z",
+  "lastUpdated": "2026-03-05T21:50:08.396Z",
   "activeFeatures": [
     "scripts",
     "synthseg_src",
@@ -33,9 +33,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-02-26T03:18:44.885Z",
-        "lastUpdated": "2026-02-27T07:43:03.271Z"
+        "lastUpdated": "2026-03-05T21:50:08.396Z"
       },
-      "lastFile": "/Users/hwon/Documents/Git/fastsurfer-docker/scripts/tui.py"
+      "lastFile": "/Users/hwon/GitHub/easy-synthseg/scripts/setup_tf_metal_env.sh"
     },
     "synthseg_src": {
       "phase": "do",
@@ -85,7 +85,7 @@
   "session": {
     "startedAt": "2026-02-26T03:09:25.220Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-02-27T07:43:03.271Z"
+    "lastActivity": "2026-03-05T21:50:08.396Z"
   },
   "history": [
     {
@@ -246,6 +246,24 @@
     },
     {
       "timestamp": "2026-02-27T07:43:03.271Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-05T21:49:49.835Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-05T21:49:54.101Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-05T21:50:08.396Z",
       "feature": "scripts",
       "phase": "do",
       "action": "updated"

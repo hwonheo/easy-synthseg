@@ -58,7 +58,7 @@ conda run -n "${CONDA_ENV}" --no-capture-output \
   python3 "${RUNNER}" \
   --i "${INPUT}" \
   --o "${OUTPUT}" \
-  --parc \
+  --v1 \
   --vol "${OUTPUT_VOL}"
 
 TIME_END=$(date +%s)

@@ -26,14 +26,12 @@ import keras.src.layers.normalization.batch_normalization as _bn_mod
 _orig_fused_can_be_used = _bn_mod.BatchNormalizationBase._fused_can_be_used
 
 def _patched_fused_can_be_used(self, ndims=None):
-    if ndims == 5:
-        return False  # 5D (3D 볼륨) FusedBatchNorm 비활성화
-    if ndims is None:
-        return _orig_fused_can_be_used(self)
-    return _orig_fused_can_be_used(self, ndims)
+    # tensorflow-metal에서 5D FusedBatchNorm이 깨지는 케이스가 있어,
+    # 안전하게 fused batchnorm을 전면 비활성화합니다.
+    return False
 
 _bn_mod.BatchNormalizationBase._fused_can_be_used = _patched_fused_can_be_used
-print(f"[INFO] BatchNorm 5D fused: patched (disabled)")
+print(f"[INFO] BatchNorm fused: patched (disabled)")
 
 t0 = time.time()
 

@@ -22,6 +22,8 @@ envs/
 docs/.bkit-memory.json
 docs/.pdca-status.json
 docs/.pdca-snapshots/
+.bkit*.json
+.pdca*.json
 
 # Claude Code 세션 데이터
 .claude/
